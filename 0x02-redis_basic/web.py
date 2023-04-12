@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """
-Web file
+Web cache
+"""
+#!/usr/bin/env python3
+"""
+web cache and tracker
 """
 import requests
 import redis
@@ -11,7 +15,7 @@ store = redis.Redis()
 
 def count_url_access(method):
     """ Decorator counting how many times
-    a Url is accessed """
+    a URL is accessed """
     @wraps(method)
     def wrapper(url):
         cached_key = "cached:" + url
