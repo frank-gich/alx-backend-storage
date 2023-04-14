@@ -9,7 +9,7 @@ import requests
 
 store = redis.Redis()
 
-
+url = 'http://slowwly.robertomurray.co.uk'
 def count_url_access(method):
     """ Decorator counting how many times
     a URL is accessed """
