@@ -7,6 +7,7 @@ import redis
 from functools import wraps
 
 store = redis.Redis()
+url = 'http://slowwly.robertomurray.co.uk'
 
 
 def count_url_access(method):
