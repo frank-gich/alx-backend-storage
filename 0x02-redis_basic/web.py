@@ -20,7 +20,7 @@ def count_url_access(method):
         if cached_data:
             return cached_data.decode("utf-8")
 
-        count_key = "count:" + url
+        count_key = f"count:{url}"
         html = method(url)
 
         store.incr(count_key)
