@@ -2,13 +2,12 @@
 """
 web cache and tracker
 """
+import requests
+import redis
 from functools import wraps
 
-import redis
-import requests
-
 store = redis.Redis()
-url = 'http://slowwly.robertomurray.co.uk'
+
 
 def count_url_access(method):
     """ Decorator counting how many times
